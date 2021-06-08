@@ -1,0 +1,66 @@
+{% extends "layout.twig" %}
+
+{% block cuerpo %}
+
+<div class="funcionalidad">
+    <div class="paginas">
+        <span>Página</span>
+        <span id="pagina">{% if pagina %}{{pagina}}{% else %}1{% endif %}</span>
+        <span>de</span>
+        <span id="paginas">{{paginas}}</span>
+
+        <button id="anterior" onclick="anteriorPagina()">Anterior</button>
+        <button id="siguiente" onclick="siguientePagina()">Siguiente</button>
+    </div>
+
+    <button id="crear" onclick="nuevo();">Crear nuevo</button>
+</div>
+
+    <form  method="POST" id="form" name="form" action="/filtrado" >
+
+        <input type="hidden" name="pagina" id="pag_form">
+
+        <label for="filtro">Filtrar:</label>
+        <select id="filtro" name="filtro" onchange="filtrar()">
+
+            <option  value="todos">Todos</option>
+
+            {% for item in familias %}
+                <option {% if option == item %}selected{% endif %} value="{{item}}">{{item}}</option>
+            {% endfor %}
+
+        </select>
+    </form>
+
+    <div class="content">
+    {% for item in articulos %}
+
+        <div class="tarjeta">
+            <img src="public/articulos/{{item.codigo}}.jpg" alt="imagen del articulo"> 
+
+            <div class="datos">
+                <p class="producto">{{item.descripcion}}</p>
+
+                <p><strong>Familia: </strong>{{item.familia}}</p>
+
+                <p><strong>Precio: </strong>{{item.precio}} €</p>
+
+                {% if item.stock > 100 %}
+                    <p class="disponible">Muchas unidades disponibles!</p>
+                {% else %}
+                    <p class="pocas">Últimas unidades!</p>
+                {% endif %}
+
+                <div class="botones_datos">
+                    <button onclick="editar('{{item._id}}')">Editar</button>
+                    <button onclick="borrar('borrar','{{item.codigo}}','{{item.descripcion}}')">Borrar</button> 
+                </div>
+
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+
+<script src="public/javascripts/index.js"></script>
+{% endblock %}

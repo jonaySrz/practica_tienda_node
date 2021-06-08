@@ -1,0 +1,127 @@
+[
+{
+    "codigo" : 1,
+    "descripcion" : "aretes largos",
+    "familia" : "complementos",
+    "impuesto" : 7,
+    "precio" : 6.7,
+    "stock" : 80
+},
+{
+   
+    "codigo" : 2,
+    "descripcion" : "bolso de piel",
+    "familia" : "complementos",
+    "impuesto" : 7,
+    "precio" : 15,
+    "stock" : 134
+},
+{
+    
+    "codigo" : 3,
+    "descripcion" : "collar de cuentas",
+    "familia" : "complementos",
+    "impuesto" : 7,
+    "precio" : 2.2,
+    "stock" : 50
+},
+{
+    
+    "codigo" : 4,
+    "descripcion" : "Vestido corto floral",
+    "familia" : "vestidos",
+    "impuesto" : 7,
+    "precio" : 15.4,
+    "stock" : 80
+},
+{
+    
+    "codigo" : 5,
+    "descripcion" : "vestido largo",
+    "familia" : "vestidos",
+    "impuesto" : 7,
+    "precio" : 20.6,
+    "stock" : 255
+},
+{
+    
+    "codigo" : 6,
+    "descripcion" : "vestido vaquero",
+    "familia" : "vestidos",
+    "impuesto" : 7,
+    "precio" : 21.99,
+    "stock" : 250
+},
+{
+    
+    "codigo" : 7,
+    "descripcion" : "zandalias",
+    "familia" : "zapatos",
+    "impuesto" : 7,
+    "precio" : 12.5,
+    "stock" : 360
+},
+{
+    
+    "codigo" : 8,
+    "descripcion" : "zapatilla blanca",
+    "familia" : "zapatos",
+    "impuesto" : 7,
+    "precio" : 17.85,
+    "stock" : 360
+},
+{
+    
+    "codigo" : 9,
+    "descripcion" : "zapatilla roja",
+    "familia" : "zapatos",
+    "impuesto" : 7,
+    "precio" : 10.99,
+    "stock" : 360
+},
+{
+    
+    "codigo" : 10,
+    "descripcion" : "deportivo blanco",
+    "familia" : "zapatos",
+    "impuesto" : 7,
+    "precio" : 9.8,
+    "stock" : 360
+},
+{
+    
+    "codigo" : 11,
+    "descripcion" : "sudadera rosa",
+    "familia" : "camisas",
+    "impuesto" : 7,
+    "precio" : 25.99,
+    "stock" : 120
+},
+{
+   
+    "codigo" : 12,
+    "descripcion" : "sueter rayas",
+    "familia" : "camisas",
+    "impuesto" : 7,
+    "precio" : 7.99,
+    "stock" : 210
+},
+{
+    
+    "codigo" : 13,
+    "descripcion" : "camisa de hombre",
+    "familia" : "camisas",
+    "impuesto" : 7,
+    "precio" : 20.5,
+    "stock" : 5
+},
+{
+    
+    "codigo" : 14,
+    "descripcion" : "reloj digital deportivo",
+    "familia" : "complementos",
+    "impuesto" : 7,
+    "precio" : 14,
+    "stock" : 5
+}
+]

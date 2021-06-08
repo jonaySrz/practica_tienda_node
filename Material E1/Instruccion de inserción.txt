@@ -1,0 +1,9 @@
+Usar Robo 3T
+Crear la Base de Datos tienda
+Dentro de ella crear la colleccion articulos
+
+Utilizar la siguiente instruccion
+Marcar todo el contenido de articulos.json
+Pegar entre los parentesis del insertMany y ejecutar
+
+db.getCollection('articulos').insertMany()

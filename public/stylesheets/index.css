@@ -1,0 +1,98 @@
+.content {
+    margin: 2vw 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    padding: 0 3vw;
+}
+
+.tarjeta img {
+    height: 25vh;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 2px black;
+}
+
+.tarjeta{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+    padding: 3vw;
+    gap: 2vw;
+    box-shadow: 0 0 5px black;
+}
+
+.tarjeta:hover {
+    background-color: rgb(211, 176, 130);
+}
+
+/* .tarjeta:hover > :first-child {
+    color: red;
+} */
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+form {
+    padding: 0 3vw;
+}
+
+.funcionalidad {
+    margin-top: 2vw;
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#crear {
+    max-width: 10%;
+    margin-bottom: 1vw;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.producto {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 650px){
+    .content {
+        margin-bottom: 5vw;
+        grid-template-columns: 1fr;
+    }
+
+    #crear {
+        max-width: 40%;
+        margin-bottom: 1vw;
+    }
+
+    .funcionalidad {
+        gap: 3vw;
+        margin:  3vw 0;
+    }
+
+    form {
+        margin-top: 3vw;
+    }
+
+    .tarjeta {
+        gap: 3vw;
+        margin: 0 3vw;
+        margin-top: 3vw;
+    }
+}

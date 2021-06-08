@@ -1,0 +1,127 @@
+<style>
+#modalCard {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.712);
+    opacity: 0;
+    transition: opacity .7s;
+    pointer-events:none;
+}
+
+.cardM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    width: 25%;
+    background: #98a9b4;
+    gap: 1vw;
+    padding: 3vw;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+#textCard {
+    font-size: calc(1rem);
+    line-height: 1rem;
+}
+</style>
+
+
+
+
+
+<div id="modalCard">
+	<div class="cardM">
+		<p id="textCard"></p>
+		<div class="btnsM">
+			<button id="aceptaBorrar" onclick="siOno(event);">Aceptar</button>
+			<button id="noBorrar" onclick="siOno(event);">Cancelar</button>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<script>
+	function hidde(){
+		modalCard.style.opacity = '0'
+		modalCard.style.pointerEvents = 'none';
+	}
+
+	function show(){
+		modalCard.style.opacity = '1'
+		modalCard.style.pointerEvents = 'auto';
+
+		window.addEventListener('click',(event)=>{
+			if (event.target.id == 'modalCard'){
+				hidde();
+			}
+		})
+	}
+
+	function borrar(cargar, codigo, articulo){
+		textCard.innerText = `¿Esta seguro que desea borrar el artículo: ${articulo}?`;
+
+		show()
+
+		dataCargar = cargar
+		dataCodigo = codigo
+	}
+
+	function siOno(event){
+    if (event.target.id == 'aceptaBorrar'){
+        carga(dataCargar, dataCodigo, 'POST')
+    }
+
+    else {
+		dataCargar = null;
+		dataCodigo = null;
+        hidde();
+    }
+}
+
+	let dataCodigo;
+	let dataCargar;
+
+	window.addEventListener('click',(event)=>{
+		if (event.target.id == modalCard){
+			hidde();
+		}
+	})
+
+    function carga(accion,codArt,method) {
+        console.log('paso por crga');
+		// Definicion de elementos
+		const form = document.createElement("form");
+		var elemento = document.createElement("input");
+
+		// Variables del formulario
+		form.method = method;
+		form.action = '/'+accion;
+
+		// Añadimos el elemento
+		elemento.name = "dato";
+		elemento.value = codArt;
+		elemento.type = "hidden"
+		form.appendChild(elemento);
+
+		// Enganchamos y envimos el formulario
+		document.body.appendChild(form);
+		form.submit();
+	};
+
+
+</script>

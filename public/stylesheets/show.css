@@ -1,0 +1,46 @@
+.marco img {
+    width: 20vw;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 0 3vw;
+    margin: 2vw 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 1vw;
+}
+
+.botones_form {
+    gap: 1vw;
+    margin-bottom: 1vw;
+    display: flex;
+    width: 100%;
+}
+
+#salir {
+    margin-left: 3vw;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 650px){
+    .content {
+        flex-direction: column;
+    }
+}

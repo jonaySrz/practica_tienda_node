@@ -1,0 +1,69 @@
+{% extends "layout.twig" %}
+
+{% block cuerpo %}
+
+<link rel="stylesheet" href="/public/stylesheets/show.css">
+
+<div class="content">
+
+<form method="POST" action="/guardar" enctype="multipart/form-data">
+
+    <input type="hidden" name="proceso" {% if articulo %}value="editar"{% else %}value="crear"{% endif %}>
+
+    <input type="hidden" name="_id" {% if articulo %}value="{{articulo._id}}"{% endif %}>
+
+    <input type="hidden" name="codigo" {% if articulo %}value="{{articulo.codigo}}"{% else %}value="{{code}}"{% endif %}>
+
+    <label for="codigo">Codigo:</label>
+    <input type="number" disabled {% if articulo %}value="{{articulo.codigo}}"{% else %}value="{{code}}"{% endif %}>
+
+    <label for="descripcion">Descripcion:</label>
+    <input type="text" name="descripcion" {% if articulo %}value="{{articulo.descripcion}}"{% endif %}>
+
+    <label for="familia">Familia:</label>
+    <input type="text" name="familia" {% if articulo %}value="{{articulo.familia}}"{% endif %}>
+
+    <label for="impuesto">Impuesto:</label>
+    <input type="number" name="impuesto" {% if articulo %}value="{{articulo.impuesto}}"{% endif %}>
+
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio" {% if articulo %}value="{{articulo.precio}}"{% endif %}>
+
+    <label for="stock">Stock:</label>
+    <input type="number" name="stock" {% if articulo %}value="{{articulo.stock}}"{% endif %}>
+
+    <div class="botones_form">
+        <button type="submit">Enviar</button>
+    <button type="reset">Cancelar</button>
+    <button type="button" id="salir" onclick="atras();">Salir</button>
+    </div>
+
+        <label class="ficheroFoto">Seleccione Foto
+        </label> 
+            <input type="file" {% if articulo %}{% else %}
+                    required{% endif %}  id="imagen_fichero" name="imagen_fichero" accept="image/png , image/jpeg" onchange="cargafoto()">
+            
+            <label id="nombre_foto"></label>
+
+</form>
+    <div class="marco">
+        <img class="imagen" id="foto" {% if articulo %} src="/public/articulos/{{articulo.codigo}}.jpg"{% else %} src="/public/articulos/0.png"{% endif %}>
+    </div>  
+</div>
+
+<script>
+    function cargafoto(){
+        document.getElementById('foto').src = 
+        window.URL.createObjectURL(document.getElementById("imagen_fichero").files[0]);
+        document.getElementById('nombre_foto').innerHTML = 
+        document.getElementById("imagen_fichero").files[0].name;
+    }
+
+    function atras (){
+        window.location.href = document.referrer
+    }
+
+</script> 
+
+
+{% endblock %}

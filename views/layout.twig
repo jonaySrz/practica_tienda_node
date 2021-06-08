@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nuevo Kiabi </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+    <link rel='stylesheet' href='../public/stylesheets/header.css' />
+    <link rel='stylesheet' href='../public/stylesheets/footer.css' />
+    <link rel="stylesheet" href="/public/stylesheets/index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="shortcut icon" href="../public/otros/logo.png" type="image/png">
+</head>
+
+<body>
+    {% block modal %}
+        {% include "./partials/modal.twig" %}
+    {% endblock %}
+
+    {% block header %}
+    {% include "./partials/header.twig" %}
+    {% endblock %}
+
+    {% block cuerpo %}
+    {% endblock %}
+
+    {% block footer %}
+    {% include "./partials/footer.twig" %}
+    {% endblock %}
+</body>
+
+</html>

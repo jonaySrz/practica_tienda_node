@@ -1,0 +1,53 @@
+Introduccion NODE JS en español - Ejercicio Libreria MongoDB
+https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction
+
+Introduccion a MongoDB
+https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/mongoose
+
+CRUD
+https://www.youtube.com/watch?v=VxRXlUrV6y0&t=91s
+https://morioh.com/p/945f03e97087
+
+FORM POST
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
+
+Ejercicio de la libreria
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms
+
+Paso 1 : Abrir la consola con Ctrl Shift p
+Ejecutar npm init --yes
+Esto creara el package json que es el fichero de configuracion del proyecto
+
+Paso 2: Instalar dependencias
+Ejecutar en la consola :npm install express mongoose
+Son modulos de node.js que nos van a permitir 
+1 - Crear un servidor con express
+2 - Conectar a la base de datos MongoDB
+
+Nota : 	El fichero de coneccion a la base de datos es similar al de siempre asi que no olvidar ningun dato 
+	Con Ctrl C o cerrando la consola se detiene el servidor node
+
+Paso 3 : Instalar programa para que el servidor se actualice con los cambios cuando estamos diseñandolo
+Ejecutar en la consola : npm install nodemon -D (Nota : la D debe estar en  mayuscula significa que mi proyecto no necesita ese modulo si esta en produccion solo lo necesita en desarrollo
+en el package.json no va a aparecer en el mismo sitio que express y Mongoose (esto se llama dependencia de desarrollo)
+
+Paso 4 : Instalar todos los paquetes necesararios para el servidor
+npm install .....
+
+Despues de instalar nodemon y el resto de paquetes necesarios tenemos que modificar el package json   : 
+"scripts": {
+    "start": "nodemon ./bin/www"
+  },
+
+El Servidor se incia con 
+npm start
+// desde la consola
+
+Instalador en produccion de nuestro servidor como servicio de windows
+https://www.advancedinstaller.com/downloading.html
+
+
+
+
+
